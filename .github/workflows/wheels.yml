@@ -1,0 +1,44 @@
+name: CI Build wheels
+
+on:
+  push:
+    tags:
+      - 'cibuildwheel*'
+
+jobs:
+  build_wheels:
+    name: Build wheels on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-13, macos-latest]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+
+      # Used to host cibuildwheel
+      - uses: actions/setup-python@v5
+
+      - name: Install cibuildwheel
+        run: python -m pip install cibuildwheel==2.21.3
+
+      - name: Set macOS deployment target
+        if: startsWith(matrix.os, 'macos')
+        run: echo "MACOSX_DEPLOYMENT_TARGET=$(sw_vers -productVersion | cut -d '.' -f 1-2)" >> $GITHUB_ENV
+
+      - name: Build wheels
+        run: python -m cibuildwheel --output-dir wheelhouse
+        env:
+          CIBW_BEFORE_BUILD_LINUX: |
+            if [ -f "/etc/alpine-release" ]; then
+              apk add --no-cache openssl-dev
+            else
+              yum install -y openssl openssl-devel
+            fi
+          CIBW_SKIP: "pp* cp38-macos*"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cibw-wheels-${{ matrix.os }}-${{ strategy.job-index }}
+          path: ./wheelhouse/*.whl

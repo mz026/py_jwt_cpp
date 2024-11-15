@@ -1,0 +1,36 @@
+[project]
+name = "py_jwt_cpp"
+requires-python = ">=3.8"
+version = "0.1.0"
+authors = [
+  {name = "Yanghsing Lin", email = "yanghsing.lin@gmail.com"}
+]
+maintainers = [
+  {name = "Yanghsing Lin", email = "yanghsing.lin@gmail.com"}
+]
+
+[tool.poetry]
+name = "py_jwt_cpp"
+version = "0.1.0"
+description = ""
+authors = ["Yanghsing Lin <yanghsing.lin@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+
+[tool.poetry.group.dev.dependencies]
+pybind11 = "^2.13.6"
+
+[tool.poetry.build]
+script = "build.py"
+generate-setup-file = true
+
+[build-system]
+requires = [
+  "poetry-core",
+  "pybind11",
+  'setuptools; python_version >= "3.10"',
+  'setuptools == 65.5.0; python_version <= "3.9"'
+]
+build-backend = "poetry.core.masonry.api"
