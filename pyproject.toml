@@ -1,18 +1,26 @@
 [project]
 name = "py_jwt_cpp"
 requires-python = ">=3.8"
-version = "0.1.0"
 authors = [
   {name = "Yanghsing Lin", email = "yanghsing.lin@gmail.com"}
 ]
 maintainers = [
   {name = "Yanghsing Lin", email = "yanghsing.lin@gmail.com"}
 ]
+description = "A Python wrapper around jwt-cpp"
+version = "0.1.0"
+dynamic = ["readme"]
+
+[project.urls]
+Homepage = "https://github.com/mz026/py_jwt_cpp"
+Documentation = "https://github.com/mz026/py_jwt_cpp"
+Repository = "https://github.com/mz026/py_jwt_cpp"
+Issues = "https://github.com/mz026/py_jwt_cpp/issues"
 
 [tool.poetry]
 name = "py_jwt_cpp"
 version = "0.1.0"
-description = ""
+description = "A Python wrapper around jwt-cpp"
 authors = ["Yanghsing Lin <yanghsing.lin@gmail.com>"]
 readme = "README.md"
 
