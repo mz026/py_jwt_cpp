@@ -5,9 +5,7 @@ A Python wrapper around [jwt-cpp](https://github.com/Thalhammer/jwt-cpp).
 
 ## Installation
 
-`pip install git+https://github.com/ns-yanghsing/py_jwt_cpp.git@VERSION`
-
-where `VERSION` is something like `0.1.0`
+`pip install py_jwt_cpp`
 
 ## Usage
 
@@ -19,7 +17,8 @@ jwt = py_jwt_cpp.encode(data, private_key)
 
 where:
 
-- `data` is a `dict` with string key and string value
+- `data` is a `dict` with string key and string value.
+- `RS256` algorithm will be used.
 
 
 ## Development
@@ -51,7 +50,7 @@ poetry build
 
 1. Tag your branch with a name staring with `cibuildwheel`.
 2. Push it onto Github to trigger the wheel build.
-3. Build sdist by `poetry run python setup.py sdist`.
+3. Build sdist by `poetry build`.
 4. Download the wheels from Github and put them into the `dist` folder.
 5. Commit the change, tag a version such as `0.1.0`, and push the tag back to Github.
 

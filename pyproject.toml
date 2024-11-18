@@ -8,7 +8,7 @@ maintainers = [
   {name = "Yanghsing Lin", email = "yanghsing.lin@gmail.com"}
 ]
 description = "A Python wrapper around jwt-cpp"
-version = "0.1.0-rc1"
+version = "0.1.0"
 dynamic = ["readme"]
 
 [project.urls]
@@ -19,7 +19,7 @@ Issues = "https://github.com/mz026/py_jwt_cpp/issues"
 
 [tool.poetry]
 name = "py_jwt_cpp"
-version = "0.1.0-rc1"
+version = "0.1.0"
 description = "A Python wrapper around jwt-cpp"
 authors = ["Yanghsing Lin <yanghsing.lin@gmail.com>"]
 readme = "README.md"
