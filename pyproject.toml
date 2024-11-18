@@ -32,7 +32,6 @@ pybind11 = "^2.13.6"
 
 [tool.poetry.build]
 script = "build.py"
-generate-setup-file = true
 
 [build-system]
 requires = [
