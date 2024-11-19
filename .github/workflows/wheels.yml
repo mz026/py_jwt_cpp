@@ -1,9 +1,9 @@
 name: CI Build wheels
 
-on: ['push']
-  # push:
-  #   tags:
-  #     - 'cibuildwheel*'
+on:
+  push:
+    branches:
+      - 'build*'
 
 jobs:
   build_wheels:
@@ -11,8 +11,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        # os: [ubuntu-latest, macos-13, macos-latest]
-        os: [ubuntu-latest]
+        os: [ubuntu-latest, macos-13, macos-latest]
 
     steps:
       - uses: actions/checkout@v4
@@ -44,7 +43,7 @@ jobs:
             else
               yum install -y openssl openssl-devel
             fi
-          CIBW_SKIP: "pp* cp38-macos*"
+          CIBW_SKIP: "pp* cp38-macos* *musllinux*"
           CIBW_ARCHS_LINUX: "aarch64 x86_64"
       - uses: actions/upload-artifact@v4
         with:
