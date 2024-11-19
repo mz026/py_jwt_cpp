@@ -22,9 +22,11 @@ jobs:
       - uses: actions/setup-python@v5
 
       - name: Enable QEMU for ARM64
+        if: startsWith(matrix.os, 'ubuntu')
         uses: docker/setup-qemu-action@v3
 
       - name: Set up Docker buildx
+        if: startsWith(matrix.os, 'ubuntu')
         uses: docker/setup-buildx-action@v3
 
       - name: Install cibuildwheel
