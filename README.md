@@ -14,12 +14,18 @@ A Python wrapper around [jwt-cpp](https://github.com/Thalhammer/jwt-cpp).
 ```python
 import py_jwt_cpp
 
-jwt = py_jwt_cpp.encode(data, private_key)
+jwt = py_jwt_cpp.encode(
+    data={'key': 'val'},
+    private_key='*****',
+    headers={'kid': 'value'}
+)
 ```
 
 where:
 
-- `data` is a `dict` with string key and string value.
+- `data`: A `dict` with string key and string value.
+- `private_key`: string, an RS256-compatible private key.
+- `headers`: [optional] A `dict` with string key and string value.
 - `RS256` algorithm will be used.
 
 
@@ -56,17 +62,11 @@ poetry build
 
 ## Release
 
-1. Tag your branch with a name staring with `cibuildwheel`.
+1. Name your branch with a name staring with `build`.
 2. Push it onto Github to trigger the wheel build.
-3. Build sdist by `poetry build`.
+3. Build `macos, python =3.8` by `poetry build`.
 4. Download the wheels from Github and put them into the `dist` folder.
-5. Commit the change, tag a version such as `0.1.0`, and push the tag back to Github.
-
-## TODO
-
-- [ ] `decode` function.
-- [ ] allowing algorithms other than `RS256`
-
+5. Upload it onto Pypi.
 
 ## LICENSE
 
