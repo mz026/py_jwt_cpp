@@ -7,7 +7,6 @@ class InvalidClaimError(Exception):
 def encode(
     data: Dict[str, str],
     private_key: str,
-    /,
     headers: Dict[str, str] = {}
 ):
     _validate_string_keys(data, 'payload')

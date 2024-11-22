@@ -1,3 +1,5 @@
+[![Unit Tests](https://github.com/mz026/py_jwt_cpp/actions/workflows/unit_test.yml/badge.svg)](https://github.com/mz026/py_jwt_cpp/actions/workflows/unit_test.yml)
+
 # py_jwt_cpp
 
 A Python wrapper around [jwt-cpp](https://github.com/Thalhammer/jwt-cpp).
@@ -25,6 +27,12 @@ where:
 
 To install the package itself along with its dependencies, run `poetry install`.
 After that you can `import py_jwt_cpp` in the virtual environment you're in.
+
+## Tests
+
+```
+python -m pytest tests/
+```
 
 ## Local Build
 
