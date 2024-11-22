@@ -26,6 +26,12 @@ where:
 To install the package itself along with its dependencies, run `poetry install`.
 After that you can `import py_jwt_cpp` in the virtual environment you're in.
 
+## Tests
+
+```
+python -m pytest tests/
+```
+
 ## Local Build
 
 ```

@@ -29,6 +29,7 @@ python = ">=3.8"
 
 [tool.poetry.group.dev.dependencies]
 pybind11 = "^2.13.6"
+pytest = "^8.3.3"
 
 [tool.poetry.build]
 script = "build.py"
