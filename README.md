@@ -1,3 +1,5 @@
+[![Unit Tests](https://github.com/mz026/py_jwt_cpp/actions/workflows/unit_test.yml/badge.svg)](https://github.com/mz026/py_jwt_cpp/actions/workflows/unit_test.yml)
+
 # py_jwt_cpp
 
 A Python wrapper around [jwt-cpp](https://github.com/Thalhammer/jwt-cpp).
