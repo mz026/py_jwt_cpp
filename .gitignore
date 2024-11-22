@@ -2,3 +2,5 @@ __pycache__
 build/
 dist/
 py_jwt_cpp.egg-info/
+.tmp
+py_jwt_cpp/jwt_cpp.cpython-311-darwin.so
