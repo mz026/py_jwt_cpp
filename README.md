@@ -1,4 +1,5 @@
 [![Unit Tests](https://github.com/mz026/py_jwt_cpp/actions/workflows/unit_test.yml/badge.svg)](https://github.com/mz026/py_jwt_cpp/actions/workflows/unit_test.yml)
+[![Security Checks](https://github.com/mz026/py_jwt_cpp/actions/workflows/security_check.yml/badge.svg)](https://github.com/mz026/py_jwt_cpp/actions/workflows/security_check.yml)
 
 # py_jwt_cpp
 

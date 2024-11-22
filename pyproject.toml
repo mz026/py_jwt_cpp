@@ -1,6 +1,6 @@
 [project]
 name = "py_jwt_cpp"
-requires-python = ">=3.8"
+requires-python = ">=3.8,<4.0"
 authors = [
   {name = "Yanghsing Lin", email = "yanghsing.lin@gmail.com"}
 ]
@@ -25,11 +25,13 @@ authors = ["Yanghsing Lin <yanghsing.lin@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.8"
+python = ">=3.8,<4.0"
 
 [tool.poetry.group.dev.dependencies]
 pybind11 = "^2.13.6"
 pytest = "^8.3.3"
+pip-audit = "^2.7.3"
+bandit = "^1.7.10"
 
 [tool.poetry.build]
 script = "build.py"
