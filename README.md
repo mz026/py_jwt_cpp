@@ -23,8 +23,8 @@ where:
 
 ## Development
 
-- To install deployment dependencies, run `poetry install`.
-- To test the change locally, run `poetry run python setup.py build_ext --inplace`
+To install the package itself along with its dependencies, run `poetry install`.
+After that you can `import py_jwt_cpp` in the virtual environment you're in.
 
 ## Local Build
 
@@ -57,7 +57,6 @@ poetry build
 ## TODO
 
 - [ ] `decode` function.
-- [ ] allowing `headers`
 - [ ] allowing algorithms other than `RS256`
 
 
